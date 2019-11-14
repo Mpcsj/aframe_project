@@ -9,7 +9,6 @@ function drawBasicScene(){
     console.log('sceneEl: ',sceneEl)
     let atual = 0.7
     for(let i=0;i<30;i++){
-        console.log('atual: ',atual)
         let elAtual =`<a-cylinder position="0 ${atual} -13" rotation="90 90 0 " radius="0.02" height="18" depth="0.2" color="#570909"></a-cylinder>`
         sceneEl.appendChild(htmlToElement(elAtual))
         atual+=0.2       
