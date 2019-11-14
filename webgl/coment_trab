@@ -1,0 +1,4 @@
+Usei o http server do NodeJS para rodar. Instalei via npm install -g http-server
+Depois para rodar: http-server -p 3000 --add-cors
+dai abri o browser em:
+localhost:3000/index.html
