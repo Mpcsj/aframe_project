@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <a-scene>
+    <a-scene id="scene">
         <a-entity camera look-controls wasd-controls acceleration="200" position="0 1.6 0"></a-entity>
         <a-assets>
             <a-asset-item id="monster" src="assets/CesiumMan.gltf"></a-asset-item>
@@ -15,25 +15,17 @@
 
         <a-entity gltf-model="#cityModel" modify-materials></a-entity>
 
-        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <!-- <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
             <a-entity position="0 1 1">
                 <a-gltf-model src="#monster"></a-gltf-model>
             </a-entity>
-        </a-entity>
-
-        <a-entity position="0 10 0" animation="property: position; to: 0 0 0; loop: true; dur: 3000">
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        </a-entity>
-
-        <a-entity position="8 10 0" animation="property: position; to: 8 0 0; loop: true; dur: 3000">
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        </a-entity>
-
-        <a-entity position="-8 10 0" animation="property: position; to: -8 0 0; loop: true; dur: 3000">
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        </a-entity>
+        </a-entity> -->
 
     </a-scene>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
