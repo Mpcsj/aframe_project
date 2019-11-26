@@ -22,8 +22,10 @@
                 <a-gltf-model src="#monster"></a-gltf-model>
             </a-entity>
         </a-entity>
-        <a-entity id="player" camera="userHeight: 1.6" wasd-controls look-controls restrict-position>
-        </a-entity>
+        <a-entity camera look-controls >
+            <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
+                      material="color: gray; opacity: 0.5" id = 'player'></a-entity>
+          </a-entity>
         <a-entity position="0 10 0" animation="property: position; to: 0 0 0; loop: true; dur: 2000">
             <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
         </a-entity>

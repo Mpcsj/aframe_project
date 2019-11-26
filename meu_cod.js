@@ -10,7 +10,7 @@ function htmlToElement(html) {
 function checkKey(e){
     console.log('keycode: ',e.keyCode)
     //getPos()
-    console.log('position: ',sceneEl.object3D.position)
+    console.log('position: ',document.getElementById('player').position)
 }
 function detectKeyPress(){
     document.onkeypress = function (e) {
@@ -25,14 +25,27 @@ function drawBasicScene(sceneEl){
     
 }
 
-AFRAME.registerComponent('user',{
-    init:()=>{
-        this.el.addEventListener("collisions",(e)=>{
-            console.log('houve colisao')
-        })
-    },
-    tick:()=>{
-        console.log('tick function')
+console.log('Aframe: ',AFRAME)
+AFRAME.registerComponent('rotation-reader', {
+    tick: function () {
+      // `this.el` is the element.
+      // `object3D` is the three.js object.
+  
+      // `rotation` is a three.js Euler using radians. `quaternion` also available.
+      console.log(this.el.object3D.rotation);
+  
+      // `position` is a three.js Vector3.
+      console.log(this.el.object3D.position);
     }
-})
+  });
+// AFRAME.registerComponent('player',{
+//     init:()=>{
+//         this.el.addEventListener("collisions",(e)=>{
+//             console.log('houve colisao')
+//         })
+//     },
+//     tick:()=>{
+//         console.log('tick function')
+//     }
+// })
 drawBasicScene(sceneEl)
