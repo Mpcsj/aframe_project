@@ -1,5 +1,6 @@
 const sceneEl = document.querySelector('a-scene');
 function htmlToElement(html) {
+    console.log('draw basic scene')
     var template = document.createElement('template');
     html = html.trim(); // Never return a text node of whitespace as the result
     template.innerHTML = html;
@@ -24,4 +25,14 @@ function drawBasicScene(sceneEl){
     
 }
 
+AFRAME.registerComponent('user',{
+    init:()=>{
+        this.el.addEventListener("collisions",(e)=>{
+            console.log('houve colisao')
+        })
+    },
+    tick:()=>{
+        console.log('tick function')
+    }
+})
 drawBasicScene(sceneEl)
