@@ -61,7 +61,23 @@ AFRAME.registerComponent('listener', {
       // Do something.
     }
   });
-  
+  AFRAME.registerComponent('updater', {
+	
+	init: function()
+	{
+		this.num = 0;
+		this.target = document.querySelector('#textArea');
+	},
+	
+	tick: function (time, timeDelta) 
+	{   
+        console.log('atualiza tempo')
+		this.num += 1;
+		let t = Math.round(time/1000);
+		this.target.setAttribute("text-geometry", "value", "Seconds: " + t)
+	}
+	
+});
 // AFRAME.registerComponent('player',{
 //     init:()=>{
 //         this.el.addEventListener("collisions",(e)=>{
