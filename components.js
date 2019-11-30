@@ -16,10 +16,10 @@ const addNewCircle = () => {
 
     const html = `
     <a-entity id="${id}" position="${positionX} 60 ${positionY}" animation="property: position; to: ${positionX} -20 ${positionY}; loop: true; dur: ${duraction}"
-        <a-gltf-model src="#fireball"scale="0.05 0.05 0.05"></a-gltf-model> 
-        static-body physics-collider="ignoreSleep: true" geometry="primitive: sphere; radius: 5">
+        static-body physics-collider="ignoreSleep: true" geometry="primitive: sphere; radius: 5" material="color: red">
     </a-entity>
     `;
+
     $('#city-area').append(html);
     generatedElements.push({ id, expiresIn: (time + duraction) })
 }
