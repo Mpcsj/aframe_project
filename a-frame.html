@@ -16,7 +16,7 @@
             <a-asset-item id="monster2" src = "assets/mech_drone/scene.gltf"></a-asset-item>
             <a-asset-item id="fireball" src="assets/fireball/scene.gltf"></a-asset-item>
         </a-assets>
-
+        <a-sound src="src: url(assets/War_Zone.mp3)" autoplay="true" position="0 2 5"></a-sound>
         <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
             <a-entity position="7 2 3.1" static-body physics-collider="ignoreSleep: true">
                 <a-gltf-model src="#monster2" scale="0.02 0.02 0.02"></a-gltf-model>
