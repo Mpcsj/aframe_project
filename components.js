@@ -19,7 +19,11 @@ const addNewCircle = () => {
         static-body physics-collider="ignoreSleep: true" geometry="primitive: sphere; radius: 5" material="color: red">
     </a-entity>
     `;
-
+    /*(const html = `
+    <a-entity id="${id}" position="${positionX} 60 ${positionY}" animation="property: position; to: ${positionX} -20 ${positionY}; loop: true; dur: ${duraction}"
+        static-body physics-collider="ignoreSleep: true" geometry="primitive: sphere; radius: 5">
+    </a-entity>
+    `;*/
     $('#city-area').append(html);
     generatedElements.push({ id, expiresIn: (time + duraction) })
 }

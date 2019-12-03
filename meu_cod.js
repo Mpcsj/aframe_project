@@ -1,4 +1,6 @@
 const sceneEl = document.querySelector('a-scene');
+var points = 0
+const incrPoints= 10
 function htmlToElement(html) {
     var template = document.createElement('template');
     html = html.trim(); // Never return a text node of whitespace as the result
@@ -10,6 +12,7 @@ function checkKey(e){
     console.log('keycode: ',e.keyCode)
     //getPos()
     console.log('position: ',sceneEl.object3D.position)
+    points += incrPoints
 }
 function detectKeyPress(){
     document.onkeypress = function (e) {
@@ -23,5 +26,4 @@ function drawBasicScene(sceneEl){
     detectKeyPress()
     
 }
-
 drawBasicScene(sceneEl)
