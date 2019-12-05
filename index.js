@@ -9,7 +9,7 @@ const init = () => {
                 console.log('tempo inicial: ',(typeof init))
                 console.log('tempo final: ',finalTime)
                 let finalPoints = 0.1*(finalTime-init) + 0.9*(points)
-                alert(`Voce perdeu, pontos: ${finalPoints}`);
+                alert(`Voce perdeu, pontos: ${Math.round(finalPoints)}`);
                 window.location.reload();
             })
         }
